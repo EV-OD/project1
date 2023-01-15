@@ -1,97 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body{
-  font-family: poppins; 
-  font-size: large;                        
-  background-color: rgba(0, 0, 0, 0.9);
-  
+  font-family: poppins;
+  font-size: large;
+  background-color: rgb(43, 43, 43);
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
 }
-span{
-  background-image: linear-gradient(45deg,#a555a7,rgb(113, 44, 122));
-  position: absolute;
-  top: 50vh;  
-  left: 50%;
-  transform: translate(-50%,-50%);
-  height: 100%;
-  width: 750px;
- 
+:root{
+  font-size: 50px;
 }
+
 
 .boxes{
   display: flex;
-  flex-direction: row;
   gap: 10px;
-  margin: 10px;
-  justify-content: space-between;
-  padding-inline: 10px;
-  align-items: center;
-
+  overflow-x: auto;
+  margin-inline: 30px;
 }
+.boxes::-webkit-scrollbar{
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(4, 123, 139);
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(5, 173, 195);
+}
+@media only screen and (max-width:596px){
+  .boxes{
+    flex-direction: column;
+    align-items: center;
+  }
+  div.outer{
+    min-width: 300px!important;
+  }
+}
+
 div.outer{
-  width: 160px;
-  height: 170px;
+  min-width: 260px;
+  height: 240px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  box-shadow: 0 0 3px 0 #332525b8;
+  margin-bottom: 10px;
 }
 
-/* h1 ma 125 garda saab tala kina aayo? */
 h1{
-  margin-top: 125px;
   text-align: center;
   color: aliceblue;
+  font-size: 1.3rem;
+  margin-block: 5px;
+  line-height: 1rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 150px;
+}
+
+@media screen and (max-width:400px) {
 }
 
 h2{
   text-align: center;
   color: #b9b9b9 ;  
+  margin-block: 0;
+  margin-bottom: 70px;
+
 }
 
-p{
-  margin: 10px;
-  width: 730px;
-  height: 25px;
-  background-color: #00d4e1;
-  border-radius: 4px;
-  box-shadow: 3px 3px 5px 1px #0000009e;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
 h1::after{
   content: '';
   position: absolute;
   width: 10px;
-  height: 40px;
-  background-color: rgb(217, 217, 217);     
-  margin : 8px;
+  height: 1.3rem;
+  background-color: rgb(217, 217, 217);
+  bottom: 0;
+  margin-left: 20px;
 }
 
 .inner1{
-    width: 136px;
-    height: 100px;
-    background-color: #d9d9d9;     
-    margin-left: 12px;
-    margin-top: 11px;
-    display: inline-block;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .inner2{
   display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.detail{
+  display: flex;
   flex-direction: column;
+  width: 70%;
   gap: 10px;
-  
 }
 
 .circle{
-  width: 30px;
-  height: 30px;
-  background-color: #d9d9d9;
-  display: inline-block;
-  position: absolute;
+  width: 45px;
+  height: 45px;
   margin-top: 3px;
   margin-left: 12px;
   border-radius: 100%;
@@ -100,21 +119,26 @@ h1::after{
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
 }
-.up{
-  display: inline-block;
-  width: 100px;
-  height: 10px;
+
+.gray{
   background-color: #d9d9d9;
-  margin-left: 48px;
-  margin-bottom: 6px;  
-  margin-top: 5px;
-}
-.down{
-  display: inline-block;
-  width: 50px;
-  height: 10px;
-  background-color: #d9d9d9;
-  margin-left: 48px;
-  margin-top: -10px;
 }
 
+.up{
+  height: 15px;
+  width: 85%;
+
+}
+.down{
+  height: 10px;
+  width: 50%;
+}
+
+.bar{
+  width: 100%;
+  background-color: #2dc3eb;
+  height: 25px;
+  margin-block: 10px;
+  box-shadow: 0px 2px 6px 0pt #5c5c5cd9;
+  margin-block: 20px;
+}
